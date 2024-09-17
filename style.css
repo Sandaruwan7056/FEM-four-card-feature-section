@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    font-family: poppins;
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: var(--VeryLightGray);
+    display: flex;
+    justify-content: center;
+}
+
+p{
+    font-size: 0.935rem;
+    font-weight: 400;
+    color: var(--GrayishBlue);
+}
+
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+
+}
+
+
+.detail {
+    max-width: 23.4375rem;
+    padding: 5.5rem 2.5rem 4.6875rem 2.5rem;
+    text-align: center;
+}
+
+.h1 {
+    font-weight: 200;
+    padding-bottom: 0.625rem;
+}
+
+.h2 {
+    font-weight: 600;
+    padding-bottom: 1.875rem;
+}
+.container{
+  max-width:23.4375rem;
+  display: grid;
+  padding: 0 1.875rem;
+  padding-bottom:4.875rem;
+  grid-template-columns: 1fr;
+  row-gap: 1.5625rem;
+  
+}
+
+.card{
+    max-width: 19.5rem;
+    height: 13.875rem;
+    background-color: white;
+    padding: 1.625rem 1.75rem;
+    position: relative;
+    border-radius: 0.3rem;
+    box-shadow: 5px 10px 5px var(--GrayishBlue);
+}
+
+.card h2{
+    padding-bottom: 0.671875rem;
+}
+
+.card img{
+    max-width: 3.5625rem;
+    max-height: 3.5625rem;
+    margin: 1.625rem 1.75rem;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    
+}
+
+
+.cyan__border__card{
+    border-top: 3px solid;
+    border-color:var(--Cyan);
+}
+
+.red__border__card{
+    border-top: 3px solid;
+    border-color:var(--Red);
+}
+
+.orange__border__card{
+    border-top: 3px solid;
+    border-color:var(--Orange);
+}
+
+.blue__border__card{
+    border-top: 3px solid;
+    border-color:var(--Blue);
+}
+
+@media(min-width:375px){
+    .detail{
+        max-width: 100%;
+        justify-content: center;
+        padding: 1.75rem 0 2rem 0;
+    }
+
+    .detail h2{
+        padding-bottom: 0.75rem;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 6.9375rem 6.9375rem 6.9375rem 6.9375rem;
+        column-gap: 1.75rem;
+        max-width: 100%;
+        padding: 0 0;
+       
+    }
+    .orange__border__card{
+       grid-column: 2;
+       grid-row: 3;
+       align-items: end;
+    }
+    
+    .cyan__border__card{
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .blue__border__card{
+        grid-row: 2;
+    }
+    .red__border__card{
+        grid-column: 2;
+    }
+}   
