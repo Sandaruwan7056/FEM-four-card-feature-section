@@ -39,11 +39,13 @@ p{
 .h1 {
     font-weight: 200;
     padding-bottom: 0.625rem;
+    color: var(--VeryDarkBlue);
 }
 
 .h2 {
     font-weight: 600;
     padding-bottom: 1.875rem;
+    color: var(--VeryDarkBlue);
 }
 .container{
   max-width:23.4375rem;
@@ -65,8 +67,10 @@ p{
     box-shadow: 5px 10px 5px var(--GrayishBlue);
 }
 
-.card h2{
+.card h3{
     padding-bottom: 0.671875rem;
+    color: var(--VeryDarkBlue);
+    font-weight: 600;
 }
 
 .card img{
@@ -113,27 +117,27 @@ p{
     .container{
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        grid-template-rows: 6.9375rem 6.9375rem 6.9375rem 6.9375rem;
+        grid-template-areas:
+            " .  red__border__card . "
+            " blue__border__card red__border__card cyan__border__card"
+            " blue__border__card orange__border__card cyan__border__card"
+            ". orange__border__card .";
         column-gap: 1.75rem;
         max-width: 100%;
-        padding: 0 0;
+        padding-bottom: 3rem;
        
     }
-    .orange__border__card{
-       grid-column: 2;
-       grid-row: 3;
-       align-items: end;
-    }
-    
-    .cyan__border__card{
-        grid-column: 3;
-        grid-row: 2;
-    }
 
-    .blue__border__card{
-        grid-row: 2;
-    }
     .red__border__card{
-        grid-column: 2;
+        grid-area: red__border__card;
+    }
+    .blue__border__card{
+        grid-area: blue__border__card;
+    }
+    .orange__border__card{
+        grid-area: orange__border__card;
+    }
+    .cyan__border__card{
+        grid-area: cyan__border__card;
     }
 }   
